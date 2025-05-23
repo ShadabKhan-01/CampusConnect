@@ -1,6 +1,43 @@
+"use client";
 import Navbar from '@/components/Navbar';
+import { useEffect, useState } from 'react';
+import { useRouter } from "next/navigation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Link from 'next/link';
+
 
 export default function ProfilePage() {
+
+  const [userName, setUserName] = useState("");
+  const [userCollageId, setUserCollageId] = useState("");
+  const [userHeadlines, setUserHeadlines] = useState("");
+  const [userAbout, setUserAbout] = useState("");
+  const [userActivity, setUserActivity] = useState("");
+  const [userExperience, setUserExperience] = useState("");
+  const [userSkills, setUserSkills] = useState("");
+  const router = useRouter();
+
+  useEffect(() => {
+    const userData = localStorage.getItem("campusConnet_userData");
+    if (!userData) {
+      console.log("No user data found in local storage");
+      router.push('/userform'); // Redirect to the form page
+      return;
+    }
+    else {
+      const parsedData = JSON.parse(userData);
+      setUserName(parsedData.name);
+      setUserCollageId(parsedData.collageId);
+      setUserHeadlines(parsedData.headlines);
+      setUserAbout(parsedData.about);
+      setUserActivity(parsedData.activity);
+      setUserExperience(parsedData.experience);
+      setUserSkills(parsedData.skills);
+    }
+
+  }, [])
+
+
   return (
     <>
       <div className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}>
@@ -16,40 +53,43 @@ export default function ProfilePage() {
                       style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOw8ipvQJzokdeA9-TPLh81FQwp6ez1GIN_Sxo9CnE6c6KodDzf8fA5wJw-9Vx6o9qx7QgcMVjlDf-Y_UJ-sHCmKS_JIPphflGTXifnaqzXN4-4EhoP0Q01HMQJXv2twCLcLbXBm2ZmWI9xIDZ8NyP79feMkK1d_GbcsHqo0ZGsoy8H8qPswB5vL5aUKUFRAYePxAL0cKP1hztNR1L9BHJsIny3STmAyAMskaJT84OhjKzn7tNSyfUZ2t30BXc9b9SG8QlU6AZZpJY")' }}
                     ></div>
                     <div className="flex flex-col justify-center">
-                      <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em]">Sophia Chen</p>
-                      <p className="text-[#4e7097] text-base font-normal leading-normal">Computer Science Student at State University | Aspiring Software Engineer</p>
+                      <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em]">{userName}</p>
+                      <p className="text-[#4e7097] text-base font-normal leading-normal">{userHeadlines}</p>
                       <p className="text-[#4e7097] text-base font-normal leading-normal">120 connections</p>
                     </div>
                   </div>
-                  <button
-                    className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px] @[480px]:w-auto"
-                  >
-                    <span className="truncate">Message</span>
-                  </button>
                 </div>
               </div>
               <div className="pb-3">
-                <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
-                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-[#1978e5] text-[#0e141b] pb-[13px] pt-4" href="#">
-                    <p className="text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]">About</p>
-                  </a>
-                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
-                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Activity</p>
-                  </a>
-                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
-                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Experience</p>
-                  </a>
-                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
-                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Skills</p>
-                  </a>
-                </div>
+                <Tabs defaultValue="account" className="w-[600px]">
+                  <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
+                    <TabsList className="grid w-full grid-cols-4" >
+                      <TabsTrigger value="account">About</TabsTrigger>
+                      <TabsTrigger value="Activity">Activity</TabsTrigger>
+                      <TabsTrigger value="Experience">Experience</TabsTrigger>
+                      <TabsTrigger value="Skills">Skills</TabsTrigger>
+                    </TabsList>
+                  </div>
+                  <TabsContent value="account">
+                    <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About</h2>
+                    <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">{userAbout}</p>
+                  </TabsContent>
+                  <TabsContent value="Activity">
+                    <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Activity</h2>
+                    <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">{userActivity}</p>
+                  </TabsContent>
+                  <TabsContent value="Experience">
+                    <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Experience</h2>
+                    <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">{userExperience}</p>
+                  </TabsContent>
+                  <TabsContent value="Skills">
+                    <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Skills</h2>
+                    <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">{userSkills}</p>
+                  </TabsContent>
+                </Tabs>
               </div>
-              <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About</h2>
-              <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                I'm a passionate computer science student at State University, specializing in software development. I'm eager to connect with fellow students, industry
-                professionals, and anyone interested in tech. Let's collaborate on projects, share ideas, and build a strong network!
-              </p>
               <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Quick Links</h2>
+              <Link href={'/my-network'}>
               <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
                 <div className="flex items-center gap-4">
                   <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="Users" data-size="24px" data-weight="regular">
@@ -62,7 +102,8 @@ export default function ProfilePage() {
                   <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Network</p>
                 </div>
                 <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">120</p></div>
-              </div>
+              </div></Link>
+              <Link href={'/'}>
               <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
                 <div className="flex items-center gap-4">
                   <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="Note" data-size="24px" data-weight="regular">
@@ -75,7 +116,8 @@ export default function ProfilePage() {
                   <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Posts</p>
                 </div>
                 <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">5</p></div>
-              </div>
+              </div></Link>
+              <Link href={'/'}>
               <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
                 <div className="flex items-center gap-4">
                   <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="UsersThree" data-size="24px" data-weight="regular">
@@ -88,7 +130,7 @@ export default function ProfilePage() {
                   <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Groups</p>
                 </div>
                 <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">3</p></div>
-              </div>
+              </div></Link>
             </div>
           </div>
         </div>
