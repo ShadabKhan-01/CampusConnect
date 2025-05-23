@@ -1,5 +1,17 @@
 import Navbar from '@/components/Navbar';
-import Head from 'next/head';
+import { FaAngleDown } from "react-icons/fa6";
+import students from '@/data/students.json';
+import Link from 'next/link';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 
 export default function StudentProfilesPage() {
     return (
@@ -39,105 +51,190 @@ export default function StudentProfilesPage() {
                                 </label>
                             </div>
                             <div className="flex gap-3 p-3 flex-wrap pr-4">
-                                <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7edf3] pl-4 pr-2">
-                                    <p className="text-[#0e141b] text-sm font-medium leading-normal">Interests</p>
-                                    <div className="text-[#0e141b]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                                <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7edf3] pl-4 pr-2">
-                                    <p className="text-[#0e141b] text-sm font-medium leading-normal">Department</p>
-                                    <div className="text-[#0e141b]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                                <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7edf3] pl-4 pr-2">
-                                    <p className="text-[#0e141b] text-sm font-medium leading-normal">Skills</p>
-                                    <div className="text-[#0e141b]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
+                                <Select>
+                                    <SelectTrigger className="w-[200px]">
+                                        <SelectValue placeholder="Select an interest" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectGroup>
+                                            <SelectLabel>Technology & Engineering</SelectLabel>
+                                            <SelectItem value="ai_engineering">AI in Engineering</SelectItem>
+                                            <SelectItem value="automation">Automation</SelectItem>
+                                            <SelectItem value="cryptography">Cryptography</SelectItem>
+                                            <SelectItem value="hardware_prototyping">Hardware Prototyping</SelectItem>
+                                            <SelectItem value="mechatronics">Mechatronics</SelectItem>
+                                            <SelectItem value="robotics">Robotics</SelectItem>
+                                            <SelectItem value="software_engineering">Software Engineering</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Data & AI</SelectLabel>
+                                            <SelectItem value="artificial_intelligence">Artificial Intelligence</SelectItem>
+                                            <SelectItem value="data_science">Data Science</SelectItem>
+                                            <SelectItem value="data_policy">Data-Driven Policy</SelectItem>
+                                            <SelectItem value="ethical_ai">Ethical AI</SelectItem>
+                                            <SelectItem value="machine_learning">Machine Learning</SelectItem>
+                                            <SelectItem value="natural_language_processing">Natural Language Processing</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Science & Health</SelectLabel>
+                                            <SelectItem value="biomedicine">Biomedicine</SelectItem>
+                                            <SelectItem value="biotech">Biotech</SelectItem>
+                                            <SelectItem value="clinical_psychology">Clinical Psychology</SelectItem>
+                                            <SelectItem value="genetics">Genetics</SelectItem>
+                                            <SelectItem value="health_research">Health Research</SelectItem>
+                                            <SelectItem value="mental_health">Mental Health</SelectItem>
+                                            <SelectItem value="public_health">Public Health</SelectItem>
+                                            <SelectItem value="therapeutic_techniques">Therapeutic Techniques</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Business & Economics</SelectLabel>
+                                            <SelectItem value="development_economics">Development Economics</SelectItem>
+                                            <SelectItem value="entrepreneurship">Entrepreneurship</SelectItem>
+                                            <SelectItem value="finance">Finance</SelectItem>
+                                            <SelectItem value="global_markets">Global Markets</SelectItem>
+                                            <SelectItem value="investment">Investment</SelectItem>
+                                            <SelectItem value="sustainable_business">Sustainable Business</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Policy & Society</SelectLabel>
+                                            <SelectItem value="community_outreach">Community Outreach</SelectItem>
+                                            <SelectItem value="development_studies">Development Studies</SelectItem>
+                                            <SelectItem value="economic_policy">Economic Policy</SelectItem>
+                                            <SelectItem value="education">Education</SelectItem>
+                                            <SelectItem value="social_impact">Social Impact</SelectItem>
+                                            <SelectItem value="startups">Startups</SelectItem>
+                                            <SelectItem value="youth_advocacy">Youth Advocacy</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Global Affairs</SelectLabel>
+                                            <SelectItem value="diplomacy">Diplomacy</SelectItem>
+                                            <SelectItem value="global_policy">Global Policy</SelectItem>
+                                            <SelectItem value="human_rights">Human Rights</SelectItem>
+                                            <SelectItem value="international_law">International Law</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Mathematics</SelectLabel>
+                                            <SelectItem value="pure_mathematics">Pure Mathematics</SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
+                                <Select>
+                                    <SelectTrigger className="w-[200px]">
+                                        <SelectValue placeholder="Select a skill" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectGroup>
+                                            <SelectLabel>Programming Languages</SelectLabel>
+                                            <SelectItem value="c">C</SelectItem>
+                                            <SelectItem value="c++">C++</SelectItem>
+                                            <SelectItem value="go">Go</SelectItem>
+                                            <SelectItem value="java">Java</SelectItem>
+                                            <SelectItem value="javascript">JavaScript</SelectItem>
+                                            <SelectItem value="python">Python</SelectItem>
+                                            <SelectItem value="r">R</SelectItem>
+                                            <SelectItem value="sql">SQL</SelectItem>
+                                            <SelectItem value="typescript">TypeScript</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Web & App Development</SelectLabel>
+                                            <SelectItem value="bootstrap">Bootstrap</SelectItem>
+                                            <SelectItem value="expressjs">Express.js</SelectItem>
+                                            <SelectItem value="flutter">Flutter</SelectItem>
+                                            <SelectItem value="html_css">HTML/CSS</SelectItem>
+                                            <SelectItem value="nextjs">Next.js</SelectItem>
+                                            <SelectItem value="nodejs">Node.js</SelectItem>
+                                            <SelectItem value="react">React</SelectItem>
+                                            <SelectItem value="tailwindcss">Tailwind CSS</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Data Science & AI</SelectLabel>
+                                            <SelectItem value="data_analysis">Data Analysis</SelectItem>
+                                            <SelectItem value="data_visualization">Data Visualization</SelectItem>
+                                            <SelectItem value="deep_learning">Deep Learning</SelectItem>
+                                            <SelectItem value="machine_learning">Machine Learning</SelectItem>
+                                            <SelectItem value="nlp">Natural Language Processing</SelectItem>
+                                            <SelectItem value="pandas">Pandas</SelectItem>
+                                            <SelectItem value="scikit_learn">Scikit-learn</SelectItem>
+                                            <SelectItem value="tensorflow">TensorFlow</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Design & Communication</SelectLabel>
+                                            <SelectItem value="figma">Figma</SelectItem>
+                                            <SelectItem value="graphic_design">Graphic Design</SelectItem>
+                                            <SelectItem value="public_speaking">Public Speaking</SelectItem>
+                                            <SelectItem value="technical_writing">Technical Writing</SelectItem>
+                                            <SelectItem value="ux_research">UX Research</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Economics & Finance Tools</SelectLabel>
+                                            <SelectItem value="excel">Excel</SelectItem>
+                                            <SelectItem value="financial_modeling">Financial Modeling</SelectItem>
+                                            <SelectItem value="stata">Stata</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Science & Research</SelectLabel>
+                                            <SelectItem value="biology_lab">Biology Lab Techniques</SelectItem>
+                                            <SelectItem value="clinical_interviewing">Clinical Interviewing</SelectItem>
+                                            <SelectItem value="genomic_analysis">Genomic Analysis</SelectItem>
+                                            <SelectItem value="microscopy">Microscopy</SelectItem>
+                                            <SelectItem value="psychometric_testing">Psychometric Testing</SelectItem>
+                                            <SelectItem value="research_methods">Research Methods</SelectItem>
+                                        </SelectGroup>
+
+                                        <SelectGroup>
+                                            <SelectLabel>Miscellaneous</SelectLabel>
+                                            <SelectItem value="project_management">Project Management</SelectItem>
+                                            <SelectItem value="team_leadership">Team Leadership</SelectItem>
+                                            <SelectItem value="vba">VBA</SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
+                                <Select>
+                                    <SelectTrigger className="w-[200px]">
+                                        <SelectValue placeholder="Select a Department" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectGroup>
+                                            <SelectLabel>Department</SelectLabel>
+                                            <SelectItem value="School of Business">School of Business</SelectItem>
+                                            <SelectItem value="School of Engineering">School of Engineering</SelectItem>
+                                            <SelectItem value="School of Economics">School of Economics</SelectItem>
+                                            <SelectItem value="School of International Studies">School of International Studies</SelectItem>
+                                            <SelectItem value="School of Life Sciences">School of Life Sciences</SelectItem>
+                                            <SelectItem value="School of Mathematical Sciences">School of Mathematical Sciences</SelectItem>
+                                            <SelectItem value="School of Social Sciences">School of Social Sciences</SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
                             </div>
                             <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/Sarah_Chen.png")' }}
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">Sarah Chen</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Computer Science, Stanford</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/David_Lee.png")' }}
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">David Lee</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Business Administration, Harvard</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/Emily_Rodriguez.png")' }}
-
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">Emily Rodriguez</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Psychology, Yale</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/Michael_Brown.png")' }}
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">Michael Brown</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Engineering, MIT</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/Jessica_Wilson.png")' }}
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">Jessica Wilson</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Biology, UCLA</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap-3 text-center pb-3">
-                                    <div className="px-4">
-                                        <div
-                                            className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("/Kevin_Garcia.png")' }}
-                                        ></div>
-                                    </div>
-                                    <div>
-                                        <p className="text-[#0e141b] text-base font-medium leading-normal">Kevin Garcia</p>
-                                        <p className="text-[#4e7097] text-sm font-normal leading-normal">Economics, UChicago</p>
-                                    </div>
-                                </div>
+                                {students.map((student) => (
+                                    <Link href={`/students/${student.id}`} key={student.id}>
+                                        <div className="flex flex-col gap-3 text-center pb-3">
+                                            <div className="px-4">
+                                                <div
+                                                    className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                                                    style={{ backgroundImage: `url("${student.photo}")` }}
+                                                ></div>
+                                            </div>
+                                            <div>
+                                                <p className="text-[#0e141b] text-base font-medium leading-normal">{student.name}</p>
+                                                <p className="text-[#4e7097] text-sm font-normal leading-normal">{student.major}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>
