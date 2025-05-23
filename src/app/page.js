@@ -1,103 +1,99 @@
-import Image from "next/image";
+import Navbar from '@/components/Navbar';
+import Head from 'next/head';
 
-export default function Home() {
+export default function ProfilePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}>
+        <div className="layout-container flex h-full grow flex-col">
+          <Navbar />
+          <div className="px-40 flex flex-1 justify-center py-5">
+            <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+              <div className="flex p-4 @container">
+                <div className="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                  <div className="flex gap-4">
+                    <div
+                      className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                      style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOw8ipvQJzokdeA9-TPLh81FQwp6ez1GIN_Sxo9CnE6c6KodDzf8fA5wJw-9Vx6o9qx7QgcMVjlDf-Y_UJ-sHCmKS_JIPphflGTXifnaqzXN4-4EhoP0Q01HMQJXv2twCLcLbXBm2ZmWI9xIDZ8NyP79feMkK1d_GbcsHqo0ZGsoy8H8qPswB5vL5aUKUFRAYePxAL0cKP1hztNR1L9BHJsIny3STmAyAMskaJT84OhjKzn7tNSyfUZ2t30BXc9b9SG8QlU6AZZpJY")' }}
+                    ></div>
+                    <div className="flex flex-col justify-center">
+                      <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em]">Sophia Chen</p>
+                      <p className="text-[#4e7097] text-base font-normal leading-normal">Computer Science Student at State University | Aspiring Software Engineer</p>
+                      <p className="text-[#4e7097] text-base font-normal leading-normal">120 connections</p>
+                    </div>
+                  </div>
+                  <button
+                    className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px] @[480px]:w-auto"
+                  >
+                    <span className="truncate">Message</span>
+                  </button>
+                </div>
+              </div>
+              <div className="pb-3">
+                <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
+                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-[#1978e5] text-[#0e141b] pb-[13px] pt-4" href="#">
+                    <p className="text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]">About</p>
+                  </a>
+                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
+                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Activity</p>
+                  </a>
+                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
+                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Experience</p>
+                  </a>
+                  <a className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7097] pb-[13px] pt-4" href="#">
+                    <p className="text-[#4e7097] text-sm font-bold leading-normal tracking-[0.015em]">Skills</p>
+                  </a>
+                </div>
+              </div>
+              <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About</h2>
+              <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                I'm a passionate computer science student at State University, specializing in software development. I'm eager to connect with fellow students, industry
+                professionals, and anyone interested in tech. Let's collaborate on projects, share ideas, and build a strong network!
+              </p>
+              <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Quick Links</h2>
+              <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="Users" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Network</p>
+                </div>
+                <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">120</p></div>
+              </div>
+              <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="Note" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M88,96a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,96Zm8,40h64a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16Zm32,16H96a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16ZM224,48V156.69A15.86,15.86,0,0,1,219.31,168L168,219.31A15.86,15.86,0,0,1,156.69,224H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H152V160a8,8,0,0,1,8-8h48V48H48Zm120-40v28.7L196.69,168Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Posts</p>
+                </div>
+                <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">5</p></div>
+              </div>
+              <div className="flex items-center gap-4 bg-slate-50 px-4 min-h-14 justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="text-[#0e141b] flex items-center justify-center rounded-lg bg-[#e7edf3] shrink-0 size-10" data-icon="UsersThree" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">My Groups</p>
+                </div>
+                <div className="shrink-0"><p className="text-[#0e141b] text-base font-normal leading-normal">3</p></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
