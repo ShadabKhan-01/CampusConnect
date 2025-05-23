@@ -6,7 +6,12 @@
         "connections": 120,
         "major": "Computer Science, Stanford",
         "headline": "AI Researcher | Stanford CS | Tech Innovator",
-        "about": "Computer science major focusing on artificial intelligence and ethical tech development. Loves coding, data science, and collaborating on impactful software solutions."
+        "about": "Computer science major focusing on artificial intelligence and ethical tech development. Loves coding, data science, and collaborating on impactful software solutions.",
+        "department": "School of Engineering",
+        "skills": ["Python", "TensorFlow", "SQL", "C++", "PyTorch", "Machine Learning"],
+        "interests": ["Artificial Intelligence", "Data Science", "Software Engineering", "Ethical AI", "Natural Language Processing"],
+        "activity": "President of Stanford AI Club, contributor to open-source ML libraries, volunteer coder for nonprofit education platforms.",
+        "experience": "AI Research Intern at OpenAI, Software Engineering Intern at Google, Machine Learning Teaching Assistant at Stanford."
     },
     {
         "id": 2,
@@ -15,7 +20,12 @@
         "connections": 98,
         "major": "Business Administration, Harvard",
         "headline": "Entrepreneur | Harvard MBA | Strategy Expert",
-        "about": "Business student passionate about startups, innovation, and strategic leadership. Aims to build companies that balance profit with social and environmental impact."
+        "about": "Business student passionate about startups, innovation, and strategic leadership. Aims to build companies that balance profit with social and environmental impact.",
+        "department": "School of Business",
+        "skills": ["Business Strategy", "Excel", "Power BI", "Market Analysis", "Pitch Deck Creation", "Leadership"],
+        "interests": ["Startups", "Social Impact", "Sustainable Business", "Entrepreneurship", "Investment"],
+        "activity": "Founder of campus startup incubator, speaker at Harvard Innovation Lab events, mentor for student entrepreneurs.",
+        "experience": "Business Strategy Intern at BCG, Product Manager Intern at a fintech startup, Venture Fellow at Impact Capital."
     },
     {
         "id": 3,
@@ -24,7 +34,12 @@
         "connections": 85,
         "major": "Psychology, Yale",
         "headline": "Psychology Major | Mental Health Advocate",
-        "about": "Yale student advocating for mental health awareness. Interested in clinical psychology and community outreach. Volunteers at youth centers and health organizations."
+        "about": "Yale student advocating for mental health awareness. Interested in clinical psychology and community outreach. Volunteers at youth centers and health organizations.",
+        "department": "School of Social Sciences",
+        "skills": ["SPSS", "Research Writing", "Behavioral Analysis", "Public Speaking", "Empathy", "Survey Design"],
+        "interests": ["Mental Health", "Community Outreach", "Clinical Psychology", "Youth Advocacy", "Therapeutic Techniques"],
+        "activity": "Organizer of Yale Mental Health Week, peer counselor at student wellness center, blogger on youth mental health topics.",
+        "experience": "Research Assistant at Yale Psychology Lab, Intern at National Alliance on Mental Illness (NAMI), Group Therapy Facilitator."
     },
     {
         "id": 4,
@@ -33,7 +48,12 @@
         "connections": 110,
         "major": "Engineering, MIT",
         "headline": "MIT Engineer | Robotics & Innovation",
-        "about": "Engineering student focused on robotics and automation. Enjoys building practical, scalable solutions to complex problems. Interned at top tech firms in R&D roles."
+        "about": "Engineering student focused on robotics and automation. Enjoys building practical, scalable solutions to complex problems. Interned at top tech firms in R&D roles.",
+        "department": "School of Engineering",
+        "skills": ["C++", "MATLAB", "Arduino", "SolidWorks", "Embedded Systems", "Python"],
+        "interests": ["Robotics", "Automation", "Mechatronics", "Hardware Prototyping", "AI in Engineering"],
+        "activity": "Team lead in MIT Robotics Club, organizer of campus hardware hackathon, mentor for FIRST Robotics teams.",
+        "experience": "R&D Intern at Boston Dynamics, Mechanical Design Intern at Tesla, Engineering Assistant for MIT Autonomous Vehicle Project."
     },
     {
         "id": 5,
@@ -42,7 +62,12 @@
         "connections": 102,
         "major": "Biology, UCLA",
         "headline": "Biologist | UCLA | Genetics Research",
-        "about": "Biology student exploring genetics and biomedical innovation. Participates in lab research and science communication projects. Excited about advancements in health and medicine."
+        "about": "Biology student exploring genetics and biomedical innovation. Participates in lab research and science communication projects. Excited about advancements in health and medicine.",
+        "department": "School of Life Sciences",
+        "skills": ["PCR", "Gel Electrophoresis", "Lab Report Writing", "CRISPR", "Microscopy", "Bioinformatics"],
+        "interests": ["Genetics", "Biomedicine", "Health Research", "Biotech", "Public Health"],
+        "activity": "Editor of UCLA Science Journal, STEM mentor at local high school, contributor to genomics podcast.",
+        "experience": "Research Assistant at UCLA Genomics Lab, Intern at Genentech, Student Fellow at Biomedical Innovation Hub."
     },
     {
         "id": 6,
@@ -51,7 +76,12 @@
         "connections": 95,
         "major": "Economics, UChicago",
         "headline": "Economics Student | Policy & Finance",
-        "about": "University of Chicago student focused on economic theory and global policy. Works on financial modeling and policy impact analysis through research groups."
+        "about": "University of Chicago student focused on economic theory and global policy. Works on financial modeling and policy impact analysis through research groups.",
+        "department": "School of Economics",
+        "skills": ["Stata", "R", "Excel", "Economic Forecasting", "Data Visualization", "Regression Analysis"],
+        "interests": ["Economic Policy", "Finance", "Global Markets", "Development Economics", "Data-Driven Policy"],
+        "activity": "Writer for UChicago Economics Review, economics tutor, participant in World Bank policy simulation.",
+        "experience": "Research Intern at Federal Reserve Bank, Policy Analyst Intern at Brookings Institution, Consultant for student-run economic think tank."
     },
     {
         "id": 7,
@@ -60,7 +90,12 @@
         "connections": 88,
         "major": "Mathematics, Princeton",
         "headline": "Math Enthusiast | Princeton | Data Nerd",
-        "about": "Princeton mathematics student interested in statistics, algorithms, and data-driven decision making. Loves problem-solving, teaching, and contributing to open-source projects."
+        "about": "Princeton mathematics student interested in statistics, algorithms, and data-driven decision making. Loves problem-solving, teaching, and contributing to open-source projects.",
+        "department": "School of Mathematical Sciences",
+        "skills": ["LaTeX", "R", "Python", "Statistics", "Data Analysis", "Algorithm Design"],
+        "interests": ["Data Science", "Pure Mathematics", "Machine Learning", "Education", "Cryptography"],
+        "activity": "Math Club leader, organizer of university coding contests, open-source contributor on GitHub.",
+        "experience": "Intern at NASA Data Analytics Team, Summer Researcher at Princeton Institute for Advanced Study, Math Tutor for undergraduates."
     },
     {
         "id": 8,
@@ -69,6 +104,11 @@
         "connections": 107,
         "major": "International Relations, Georgetown",
         "headline": "IR Major | Global Policy | Diplomat",
-        "about": "Georgetown student passionate about diplomacy and sustainable development. Experienced in Model UN, international law, and human rights advocacy through internships and fieldwork."
+        "about": "Georgetown student passionate about diplomacy and sustainable development. Experienced in Model UN, international law, and human rights advocacy through internships and fieldwork.",
+        "department": "School of International Studies",
+        "skills": ["Public Speaking", "Policy Drafting", "Negotiation", "International Law", "Cultural Sensitivity", "Report Writing"],
+        "interests": ["Diplomacy", "Human Rights", "Global Policy", "International Law", "Development Studies"],
+        "activity": "Secretary-General of Georgetown MUN, writer for International Affairs Review, volunteer at refugee support NGO.",
+        "experience": "Intern at United Nations HQ, Legal Fellow at International Human Rights Organization, Research Assistant in Global Policy Lab."
     }
 ]

@@ -64,10 +64,10 @@ export default function ProfilePage() {
                 <Tabs defaultValue="account" className="w-[600px]">
                   <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
                     <TabsList className="grid w-full grid-cols-4" >
-                      <TabsTrigger value="account">About</TabsTrigger>
-                      <TabsTrigger value="Activity">Activity</TabsTrigger>
-                      <TabsTrigger value="Experience">Experience</TabsTrigger>
-                      <TabsTrigger value="Skills">Skills</TabsTrigger>
+                      <TabsTrigger className={'cursor-pointer'} value="account">About</TabsTrigger>
+                      <TabsTrigger className={'cursor-pointer'} value="Activity">Activity</TabsTrigger>
+                      <TabsTrigger className={'cursor-pointer'} value="Experience">Experience</TabsTrigger>
+                      <TabsTrigger className={'cursor-pointer'} value="Skills">Skills</TabsTrigger>
                     </TabsList>
                   </div>
                   <TabsContent value="account">

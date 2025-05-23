@@ -21,12 +21,12 @@ export default function Page() {
             <div className="flex flex-col w-80">
               <div className="flex h-full min-h-[700px] flex-col justify-between bg-slate-50 p-4">
                 <div className="flex flex-col gap-4">
-                  <div className="flex gap-3">
+                  <div className="flex items-center gap-3">
                     <div
                       className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                      style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAo60wUzJn6Ho7xtPfaqIDyspPxS-H4yb19fw-wFIaHvoVENUyJmyXfRtxGSZUevg9W5TlLAKHgZ6elTm3U0hbOYHPyEB9OdF9Rr9eAA3eojUJ7OF2KIx9Ni3FXOtW5BNQCEVOrD5TcmFf7ThOD0lCmznHPWFAqBnRQVyPmYaaSxN0CR-tehajdyufMI5GZiijkoHu6m6qRcOL1YJDdmtBFO7oSjZzafbnOlPMPANB7sa4IqixIRDV1Zx8EhpuHjcrBiH7CdzKv_LLv")' }}
+                      style={{ backgroundImage: 'url("/me.png")' }}
                     ></div>
-                    <h1 className="text-[#0e141b] text-base font-medium leading-normal">Sophia Chen</h1>
+                    <h1 className="text-[#0e141b] text-base font-medium leading-normal">My Profile</h1>
                   </div>
                   <div className="flex flex-col gap-2">
                     <Link href={'/'}>
