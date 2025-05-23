@@ -1,8 +1,53 @@
-import Head from 'next/head';
+"use client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from "next/navigation";
 
-export default function OnboardingPage() {
+
+export default function Page() {
+
+  const [userName, setUserName] = useState("");
+  const [userCollageId, setUserCollageId] = useState("");
+  const [userHeadlines, setUserHeadlines] = useState("");
+  const [userAbout, setUserAbout] = useState("");
+  const [userActivity, setUserActivity] = useState("");
+  const [userExperience, setUserExperience] = useState("");
+  const [userSkills, setUserSkills] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = () => {
+
+    if (!userName || !userCollageId || !userHeadlines || !userAbout || !userActivity || !userExperience || !userSkills) {
+      toast.error('Please fill all the fields');
+      return;
+    }
+
+    const userData = {
+      name: userName,
+      collageId: userCollageId,
+      headlines: userHeadlines,
+      about: userAbout,
+      activity: userActivity,
+      experience: userExperience,
+      skills: userSkills
+    };
+
+    console.log(userName)
+    console.log(userData);
+    localStorage.setItem("campusConnet_userData", JSON.stringify(userData));
+    toast.success('Data saved!');
+    setTimeout(() => {
+      router.push('/'); // Redirect to the home page
+    }, 1000);
+  }
+
   return (
     <>
+      <div><Toaster /></div>
       <div
         className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
         style={{
@@ -14,70 +59,56 @@ export default function OnboardingPage() {
           <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
             <div className="flex items-center gap-4 text-[#0e141b]">
               <div className="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
-                </svg>
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
               </div>
-              <h2 className="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em]">ConnectU</h2>
+              <h2 className="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em]">CampusConnect</h2>
             </div>
-            <button
-              className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1978e5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span className="truncate">Next</span>
-            </button>
+            <Button onClick={handleSubmit} className={'cursor-pointer'}>Submit</Button>
           </header>
           <div className="px-40 flex flex-1 justify-center py-5">
-            <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+            <div className="flex items-center flex-col py-5 ">
               <h2 className="text-[#0e141b] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Tell us about yourself</h2>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#0e141b] text-base font-medium leading-normal pb-2">Full Name</p>
-                  <input
-                    placeholder="Enter your full name"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e141b] focus:outline-0 focus:ring-0 border border-[#d0dbe7] bg-slate-50 focus:border-[#d0dbe7] h-14 placeholder:text-[#4e7097] p-[15px] text-base font-normal leading-normal"
-                    defaultValue=""
-                  />
-                </label>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="name">Name</Label>
+                  <Input value={userName} onChange={(e) => setUserName(e.target.value)} type="text" id="name" placeholder="Enter your Full Name" />
+                </div>
               </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#0e141b] text-base font-medium leading-normal pb-2">College ID</p>
-                  <input
-                    placeholder="Enter your college ID"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e141b] focus:outline-0 focus:ring-0 border border-[#d0dbe7] bg-slate-50 focus:border-[#d0dbe7] h-14 placeholder:text-[#4e7097] p-[15px] text-base font-normal leading-normal"
-                    defaultValue=""
-                  />
-                </label>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="collage-id">Collage ID</Label>
+                  <Input value={userCollageId} onChange={(e) => setUserCollageId(e.target.value)} type='text' id="collage-id" placeholder="Collage ID" />
+                </div>
               </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#0e141b] text-base font-medium leading-normal pb-2">Department</p>
-                  <select
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e141b] focus:outline-0 focus:ring-0 border border-[#d0dbe7] bg-slate-50 focus:border-[#d0dbe7] h-14 bg-[image:--select-button-svg] placeholder:text-[#4e7097] p-[15px] text-base font-normal leading-normal"
-                  >
-                    <option value="one">Select your department</option>
-                    <option value="two">two</option>
-                    <option value="three">three</option>
-                  </select>
-                </label>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="Headlines">Headlines</Label>
+                  <Input value={userHeadlines} onChange={(e) => setUserHeadlines(e.target.value)} type="text" id="Headlines" placeholder="Headlines" />
+                </div>
               </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#0e141b] text-base font-medium leading-normal pb-2">Interests</p>
-                  <textarea
-                    placeholder="Enter your interests"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e141b] focus:outline-0 focus:ring-0 border border-[#d0dbe7] bg-slate-50 focus:border-[#d0dbe7] min-h-36 placeholder:text-[#4e7097] p-[15px] text-base font-normal leading-normal"
-                  ></textarea>
-                </label>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full gap-1.5">
+                  <Label htmlFor="about">About</Label>
+                  <Textarea value={userAbout} onChange={(e) => setUserAbout(e.target.value)} placeholder="Type your message here." id="about" />
+                </div>
               </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#0e141b] text-base font-medium leading-normal pb-2">Skills</p>
-                  <textarea
-                    placeholder="Enter your skills"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e141b] focus:outline-0 focus:ring-0 border border-[#d0dbe7] bg-slate-50 focus:border-[#d0dbe7] min-h-36 placeholder:text-[#4e7097] p-[15px] text-base font-normal leading-normal"
-                  ></textarea>
-                </label>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full gap-1.5">
+                  <Label htmlFor="Activity">Activity</Label>
+                  <Textarea value={userActivity} onChange={(e) => setUserActivity(e.target.value)} placeholder="Type your Activities here." id="Activity" />
+                </div>
+              </div>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full gap-1.5">
+                  <Label htmlFor="Experience">Experience</Label>
+                  <Textarea value={userExperience} onChange={(e) => setUserExperience(e.target.value)} placeholder="Type your Experience here." id="Experience" />
+                </div>
+              </div>
+              <div className="flex w-sm gap-4 px-4 py-3">
+                <div className="grid w-full gap-1.5">
+                  <Label htmlFor="Skills">Skills</Label>
+                  <Textarea value={userSkills} onChange={(e) => setUserSkills(e.target.value)} placeholder="Type your Skills here." id="Skills" />
+                </div>
               </div>
             </div>
           </div>

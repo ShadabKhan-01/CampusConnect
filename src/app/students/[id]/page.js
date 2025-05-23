@@ -16,7 +16,7 @@ export default function UserProfilePage() {
                       className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
                       style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3Y86lbs6HlVJxxlX7WgfqsCdx8Qic7lDN6jy9ePjzgIyzxZR7t4-jMtkcLbornc4ZKTL8IRkSQH7Fo_qEBprRgq9ffvgemRsD0qAsjZNpA_79EHIqqZvmRtS4QMR3Akbvhe5AMwh-qxgjLNS6xKRyUH4GtxjKiBc_krbXZY4wUMUBU3935fDYLDEt1JY68iL6V5-xRLdPDtMICnL0qDnN8QR93n6aCCm2mNMEiz644i_OVMlqMwlL4R8fupb4DbT8kvKsHb5QAi2K")' }}
                     ></div>
-                    <div className="flex flex-col items-center justify-center justify-center">
+                    <div className="flex flex-col items-center justify-center">
                       <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Sophia Carter</p>
                       <p className="text-[#4e7097] text-base font-normal leading-normal text-center">Computer Science Student at State University | Aspiring Software Engineer</p>
                       <p className="text-[#4e7097] text-base font-normal leading-normal text-center">100 connections</p>
