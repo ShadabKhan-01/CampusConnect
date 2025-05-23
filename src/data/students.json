@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "photo": "/Sarah_Chen.png",
+        "name": "Sarah Chen",
+        "connections": 120,
+        "major": "Computer Science, Stanford",
+        "headline": "AI Researcher | Stanford CS | Tech Innovator",
+        "about": "Computer science major focusing on artificial intelligence and ethical tech development. Loves coding, data science, and collaborating on impactful software solutions."
+    },
+    {
+        "id": 2,
+        "photo": "/David_Lee.png",
+        "name": "David Lee",
+        "connections": 98,
+        "major": "Business Administration, Harvard",
+        "headline": "Entrepreneur | Harvard MBA | Strategy Expert",
+        "about": "Business student passionate about startups, innovation, and strategic leadership. Aims to build companies that balance profit with social and environmental impact."
+    },
+    {
+        "id": 3,
+        "photo": "/Emily_Rodriguez.png",
+        "name": "Emily Rodriguez",
+        "connections": 85,
+        "major": "Psychology, Yale",
+        "headline": "Psychology Major | Mental Health Advocate",
+        "about": "Yale student advocating for mental health awareness. Interested in clinical psychology and community outreach. Volunteers at youth centers and health organizations."
+    },
+    {
+        "id": 4,
+        "photo": "/Michael_Brown.png",
+        "name": "Michael Brown",
+        "connections": 110,
+        "major": "Engineering, MIT",
+        "headline": "MIT Engineer | Robotics & Innovation",
+        "about": "Engineering student focused on robotics and automation. Enjoys building practical, scalable solutions to complex problems. Interned at top tech firms in R&D roles."
+    },
+    {
+        "id": 5,
+        "photo": "/Jessica_Wilson.png",
+        "name": "Jessica Wilson",
+        "connections": 102,
+        "major": "Biology, UCLA",
+        "headline": "Biologist | UCLA | Genetics Research",
+        "about": "Biology student exploring genetics and biomedical innovation. Participates in lab research and science communication projects. Excited about advancements in health and medicine."
+    },
+    {
+        "id": 6,
+        "photo": "/Kevin_Garcia.png",
+        "name": "Kevin Garcia",
+        "connections": 95,
+        "major": "Economics, UChicago",
+        "headline": "Economics Student | Policy & Finance",
+        "about": "University of Chicago student focused on economic theory and global policy. Works on financial modeling and policy impact analysis through research groups."
+    },
+    {
+        "id": 7,
+        "photo": "/Sophia_Chen.png",
+        "name": "Sophia Chen",
+        "connections": 88,
+        "major": "Mathematics, Princeton",
+        "headline": "Math Enthusiast | Princeton | Data Nerd",
+        "about": "Princeton mathematics student interested in statistics, algorithms, and data-driven decision making. Loves problem-solving, teaching, and contributing to open-source projects."
+    },
+    {
+        "id": 8,
+        "photo": "/Sophia_Carter.png",
+        "name": "Sophia Carter",
+        "connections": 107,
+        "major": "International Relations, Georgetown",
+        "headline": "IR Major | Global Policy | Diplomat",
+        "about": "Georgetown student passionate about diplomacy and sustainable development. Experienced in Model UN, international law, and human rights advocacy through internships and fieldwork."
+    }
+]

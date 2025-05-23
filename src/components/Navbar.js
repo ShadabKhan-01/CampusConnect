@@ -1,5 +1,13 @@
-import React from 'react'
 import Link from 'next/link'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 const Navbar = () => {
     return (
@@ -41,10 +49,22 @@ const Navbar = () => {
                         />
                     </div>
                 </label>
-                <div
-                    className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style={{ backgroundImage: 'url("/Sophia_Chen.png")' }}
-                ></div>
+                <DropdownMenu>
+                    <DropdownMenuTrigger>
+                        <div
+                            className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+                            style={{ backgroundImage: 'url("/me.png")' }}
+                        ></div>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem><Link href={'/'}>View Profile</Link></DropdownMenuItem>
+                        <DropdownMenuItem><Link href={'/userform'}>Edit Profile Details</Link></DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+
             </div>
         </header>
     )

@@ -69,7 +69,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQWmW2-WZMNcoI-6dKXjyOE78YrSjwYDdYAf5yA626NfbY76KMIfRdikX4BYx-U4vRDgD-4-zpS7QOtu1iVgw5IG8q1osbCNxRgeEPSO5d1rCBNJB9r-1fmSQzPVRQaY5L6blgSVaTfTzSJQxpe29yRa35QR_0tn1spqlwV5wDq9_MMemqnFI-QiOm8ZIXPXl8iTUOawXT2fHRGvTvdEg6pUYcBh2ErqZgVqmSD_u9UGJxl9uo1OTnQpRl9uQdwlfe1zRYuxPD1sc9")' }}
+                                            style={{ backgroundImage: 'url("/Sarah_Chen.png")' }}
                                         ></div>
                                     </div>
                                     <div>
@@ -81,7 +81,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNgh2bAWymz9FPb3ZikS4uqvgQ2P-qbIBDgoqkflLsyQOyi4bVGAHtnaKx9LisBIPZN9oZuVpW-8wV65X3fY7es5Nv69BjpswEa5qndb4unRZWcl3e7NyOXU7gf59KQPb6hd_00uu7jHO6ClB2O7VCAWYeuecCRYAOkCfUQ9s9fdK68VmWwOvzYBh2APVrqoJoeZg5BTk-xxh9SGOIyqmiR5n0S1LcwHoC7QjpFuNZe9c4WcHxWf5U4gO5htZTRwfI2MIzoJGNxmJW")' }}
+                                            style={{ backgroundImage: 'url("/David_Lee.png")' }}
                                         ></div>
                                     </div>
                                     <div>
@@ -93,7 +93,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuobIuXJ3ykgvKFeVrlhumYTNA6QtBAyU-EaTFEFsH1Cz6MzkKS8jgp6TOv4nw-XiERFFXYVtVY6d2P642gorgMs9ijOidg6ogNWxaIyZOtf9d62AEjob3VscuUYxcfDJwajsnHYKxH_adc1mSnqvn_-JUSTzyVsBYkeZaF-G60_ryWeZVBP_k9rr5YNmGBlrmRzAC0y-phUIvGRtjGuhwkQ9Q9RdAB2F4tTKcP6hxCfWAxxys8v9jhmgdidtxooiGDn2CeSXhJ-P6")' }}
+                                            style={{ backgroundImage: 'url("/Emily_Rodriguez.png")' }}
 
                                         ></div>
                                     </div>
@@ -106,7 +106,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQk5lQjzX4B3dnwf9bQg_f_Ri_db4Hpru99h0_U1hf7pUBCFic0UEaWR3hnDt0lJAgWxmbogNyx5dPEAr3HFCZNDMdVrm6CK-XpxXJyIfnB9J_S7MoNBIf7e9UcTbEHVkL-oIc4PaFoBD-5eJtgFFo9ONXvIqarSvgyY8R8YxO5di57wec_ege5CEEOkRe2eR0HQLrqPF4EvOuegcDqmUYL_JNHDEPsgjQrF8Vvt2d1EicbW9mavC2jbkm1swQHE04jeucpdpjVoam")' }}
+                                            style={{ backgroundImage: 'url("/Michael_Brown.png")' }}
                                         ></div>
                                     </div>
                                     <div>
@@ -118,7 +118,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXVcX0ftMTWc_rhnlL9vPix5P2gL5slZukDe4rY6g7MkOeTrkSzDeXHtl5xnPGiwRBmlbuMNie0daWuLI1uxGnnlccG597YXO_G9g0teglTfvcmRiFEUhh4zRR09nx17i0osUl5wJY9JgBJASEwtNyYBkTPn4T3aASzRucxBMQKTjNimHB-E8klUR_OET-5Ofpu_1Z6RASFdXckKek5TMLiNhhbnNxQA3HvfTCux1X8e47x3HDld_tTnj9NNp2fNKVRQf4dcwLRLAS")' }}
+                                            style={{ backgroundImage: 'url("/Jessica_Wilson.png")' }}
                                         ></div>
                                     </div>
                                     <div>
@@ -130,7 +130,7 @@ export default function StudentProfilesPage() {
                                     <div className="px-4">
                                         <div
                                             className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                                            style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_kKqo-UKPSYUIl8lTN8j2LGiCp_MuIp_Ef-u-qTcQMjyX-WFE_vvzY5mY7lccjqManrFLUU0fPrfom_iqf8hvgA6U0-lo4H3JBO4LRpoCHaah7WvR49QXzDWEpgdwAAUpOsThwgx44E5W5jbg0f-up_hywBViGkn72deUPYZ8M6yotMmsGZbLd0lrnhJnnH3x89KwCXR2yjSvuKtMYnct0xEHXUo17ZzoAyUbqwFXGkY0wSsmmy5g0qFDcZjFZKQlJeLhNGQmlSHo")' }}
+                                            style={{ backgroundImage: 'url("/Kevin_Garcia.png")' }}
                                         ></div>
                                     </div>
                                     <div>
