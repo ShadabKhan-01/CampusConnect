@@ -120,7 +120,7 @@ export default function StudentProfilesPage() {
                                     </SelectContent>
                                 </Select>
                             </div>
-                            <div className="grid w-full grid-cols-5 gap-3 p-4">
+                            <div className="grid w-full grid-cols-2 md:grid-cols-5 gap-3 p-4">
                                 {studentData.length === 0 && (
                                     <h3>No such result to show</h3>
                                 )}

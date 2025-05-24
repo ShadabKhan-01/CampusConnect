@@ -15,7 +15,6 @@ const Searchbar = () => {
         if (value) {
             const findedStudent = students.filter(student => student.name.toLowerCase().includes(value.toLowerCase()));
             setShowSearch(findedStudent);
-            // console.log(showSearch);
         }
         else {
             setShowSearch([]);

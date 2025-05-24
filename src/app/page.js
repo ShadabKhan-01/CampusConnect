@@ -43,14 +43,14 @@ export default function ProfilePage() {
       <div className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}>
         <div className="layout-container flex h-full grow flex-col">
           <Navbar />
-          <div className="px-40 flex flex-1 justify-center py-5">
-            <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div className="px-10 md:px-40 flex flex-1 justify-center py-5">
+            <div className="layout-content-container flex flex-col max-w-[1000px] flex-1">
               <div className="flex p-4 @container">
                 <div className="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
                   <div className="flex gap-4">
                     <div
-                      className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
-                      style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOw8ipvQJzokdeA9-TPLh81FQwp6ez1GIN_Sxo9CnE6c6KodDzf8fA5wJw-9Vx6o9qx7QgcMVjlDf-Y_UJ-sHCmKS_JIPphflGTXifnaqzXN4-4EhoP0Q01HMQJXv2twCLcLbXBm2ZmWI9xIDZ8NyP79feMkK1d_GbcsHqo0ZGsoy8H8qPswB5vL5aUKUFRAYePxAL0cKP1hztNR1L9BHJsIny3STmAyAMskaJT84OhjKzn7tNSyfUZ2t30BXc9b9SG8QlU6AZZpJY")' }}
+                      className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-20 w-32"
+                      style={{ backgroundImage: 'url("/me.png")' }}
                     ></div>
                     <div className="flex flex-col justify-center">
                       <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em]">{userName}</p>
@@ -61,9 +61,9 @@ export default function ProfilePage() {
                 </div>
               </div>
               <div className="pb-3">
-                <Tabs defaultValue="account" className="w-[600px]">
+                <Tabs defaultValue="account" className="max-w-[700px] w-full">
                   <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
-                    <TabsList className="grid w-full grid-cols-4" >
+                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4" >
                       <TabsTrigger className={'cursor-pointer'} value="account">About</TabsTrigger>
                       <TabsTrigger className={'cursor-pointer'} value="Activity">Activity</TabsTrigger>
                       <TabsTrigger className={'cursor-pointer'} value="Experience">Experience</TabsTrigger>

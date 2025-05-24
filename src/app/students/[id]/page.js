@@ -20,7 +20,7 @@ export default async function UserProfilePage({ params }) {
       <div className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}>
         <div className="layout-container flex h-full grow flex-col">
           <Navbar />
-          <div className="px-40 flex flex-1 justify-center py-5">
+          <div className="px-10 md:px-40 flex flex-1 justify-center py-5">
             <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
               <div className="flex p-4 @container">
                 <div className="flex w-full flex-col gap-4 items-center">
@@ -41,8 +41,8 @@ export default async function UserProfilePage({ params }) {
               </div>
               <div className="pb-3">
                 <div className="flex border-b border-[#d0dbe7] px-4 gap-8">
-                  <Tabs defaultValue="About" className="">
-                    <div className="flex border-b border-[#d0dbe7] gap-8 w-[400px]">
+                  <Tabs defaultValue="About" >
+                    <div className="flex border-b border-[#d0dbe7] gap-8 max-w-[400px]">
                       <TabsList className="grid w-full grid-cols-3" >
                         <TabsTrigger className={'cursor-pointer'} value="About">About</TabsTrigger>
                         <TabsTrigger className={'cursor-pointer'} value="Activity">Activity</TabsTrigger>
