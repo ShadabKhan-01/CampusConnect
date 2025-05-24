@@ -47,15 +47,15 @@ export default function ProfilePage() {
             <div className="layout-content-container flex flex-col max-w-[1000px] flex-1">
               <div className="flex p-4 @container">
                 <div className="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 flex-col sm:flex-row items-center">
                     <div
                       className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-20 w-32"
                       style={{ backgroundImage: 'url("/me.png")' }}
                     ></div>
                     <div className="flex flex-col justify-center">
-                      <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em]">{userName}</p>
-                      <p className="text-[#4e7097] text-base font-normal leading-normal">{userHeadlines}</p>
-                      <p className="text-[#4e7097] text-base font-normal leading-normal">120 connections</p>
+                      <p className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center sm:text-left">{userName}</p>
+                      <p className="text-[#4e7097] text-base font-normal leading-normal text-center sm:text-left">{userHeadlines}</p>
+                      <p className="text-[#4e7097] text-base font-normal leading-normal text-center sm:text-left">120 connections</p>
                     </div>
                   </div>
                 </div>
