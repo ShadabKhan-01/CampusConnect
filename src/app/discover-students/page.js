@@ -101,9 +101,6 @@ export default function StudentProfilesPage() {
                                                 {item.skill.map((skill, skillIndex) => (
                                                     <SelectItem key={skillIndex} value={skill}>{skill}</SelectItem>
                                                 ))}
-                                                <SelectItem value="python">Python</SelectItem>
-                                                <SelectItem value="r">R</SelectItem>
-                                                <SelectItem value="sql">SQL</SelectItem>
                                             </SelectGroup>
                                         ))}
                                     </SelectContent>
@@ -124,6 +121,9 @@ export default function StudentProfilesPage() {
                                 </Select>
                             </div>
                             <div className="grid w-full grid-cols-5 gap-3 p-4">
+                                {studentData.length === 0 && (
+                                    <h3>No such result to show</h3>
+                                )}
                                 {studentData.map((student) => (
                                     <Link href={`/students/${student.id}`} key={student.id}>
                                         <div className="flex flex-col gap-3 text-center pb-3">
