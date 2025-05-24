@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Programming & Development",
+        "skill": [
+            "C++",
+            "Python",
+            "R",
+            "SQL"
+        ]
+    },
+    {
+        "name": "Machine Learning & AI Tools",
+        "skill": [
+            "TensorFlow",
+            "PyTorch",
+            "Machine Learning"
+        ]
+    },
+    {
+        "name": "Business & Data Analysis",
+        "skill": [
+            "Business Strategy",
+            "Data Analysis",
+            "Data Visualization",
+            "Economic Forecasting",
+            "Excel",
+            "Market Analysis",
+            "Power BI",
+            "Regression Analysis",
+            "SPSS",
+            "Stata"
+        ]
+    },
+    {
+        "name": "Engineering & Design",
+        "skill": [
+            "Algorithm Design",
+            "Arduino",
+            "Embedded Systems",
+            "MATLAB",
+            "SolidWorks"
+        ]
+    },
+    {
+        "name": "Biotech & Lab Skills",
+        "skill": [
+            "Bioinformatics",
+            "CRISPR",
+            "Gel Electrophoresis",
+            "Lab Report Writing",
+            "Microscopy",
+            "PCR"
+        ]
+    },
+    {
+        "name": "Communication & Soft Skills",
+        "skill": [
+            "Cultural Sensitivity",
+            "Empathy",
+            "Leadership",
+            "Negotiation",
+            "Pitch Deck Creation",
+            "Policy Drafting",
+            "Public Speaking",
+            "Report Writing",
+            "Research Writing",
+            "Survey Design"
+        ]
+    },
+    {
+        "name": "Academic & Research",
+        "skill": [
+            "Behavioral Analysis",
+            "International Law",
+            "LaTeX",
+            "Statistics"
+        ]
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "name": "Technology & Engineering",
+        "skill": [
+            "AI in Engineering",
+            "Automation",
+            "Cryptography",
+            "Hardware Prototyping",
+            "Mechatronics",
+            "Robotics",
+            "Software Engineering"
+        ]
+    },
+    {
+        "name": "Data & AI",
+        "skill": [
+            "Artificial Intelligence",
+            "Data Science",
+            "Data-Driven Policy",
+            "Ethical AI",
+            "Machine Learning",
+            "Natural Language Processing"
+        ]
+    },
+    {
+        "name": "Business & Economics",
+        "skill": [
+            "Economic Policy",
+            "Entrepreneurship",
+            "Finance",
+            "Global Markets",
+            "Investment",
+            "Startups",
+            "Sustainable Business"
+        ]
+    },
+    {
+        "name": "Health & Social Sciences",
+        "skill": [
+            "Biomedicine",
+            "Biotech",
+            "Clinical Psychology",
+            "Community Outreach",
+            "Development Economics",
+            "Development Studies",
+            "Genetics",
+            "Health Research",
+            "Human Rights",
+            "Mental Health",
+            "Public Health",
+            "Social Impact",
+            "Therapeutic Techniques",
+            "Youth Advocacy"
+        ]
+    },
+    {
+        "name": "Global & Policy",
+        "skill": [
+            "Diplomacy",
+            "Global Policy",
+            "International Law"
+        ]
+    },
+    {
+        "name": "Education & Pure Sciences",
+        "skill": [
+            "Education",
+            "Pure Mathematics"
+        ]
+    }
+]
