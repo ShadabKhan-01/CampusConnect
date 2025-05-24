@@ -44,7 +44,7 @@ export default function Page() {
                     <Link href={'/discover-students'}>
                       <div className="flex items-center gap-3 px-3 py-2">
                         <LuUserSearch size={24} />
-                        <p className="text-[#0e141b] text-sm font-medium leading-normal">Find</p>
+                        <p className="text-[#0e141b] text-sm font-medium leading-normal">Discover</p>
                       </div>
                     </Link>
                     <Link href={'#'}>
